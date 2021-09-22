@@ -38,7 +38,7 @@ lazy val `scala-cloudformation-custom-resource` = (project in file("."))
   .settings(
     libraryDependencies ++= {
       val specs2Version = "4.7.1"
-      val catsVersion = "2.5.0"
+      val catsVersion = "2.6.1"
       val catsEffectVersion = "2.4.1"
       val circeVersion = "0.14.1"
 
