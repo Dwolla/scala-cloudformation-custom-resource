@@ -62,7 +62,7 @@ lazy val `scala-cloudformation-custom-resource` = (project in file("."))
         "org.apache.logging.log4j" % "log4j-core" % "2.11.1",
         "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.11.1",
         "org.apache.httpcomponents" % "httpclient" % "4.5.2",
-        "com.amazonaws" % "aws-lambda-java-events" % "1.1.0" % Test excludeAll(amazonJavaSdks: _*),
+        "com.amazonaws" % "aws-lambda-java-events" % "1.3.0" % Test excludeAll(amazonJavaSdks: _*),
         "org.specs2" %% "specs2-core" % specs2Version % Test,
         "org.specs2" %% "specs2-mock" % specs2Version % Test,
         "io.circe" %% "circe-literal" % circeVersion % Test,
