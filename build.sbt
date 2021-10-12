@@ -67,7 +67,7 @@ lazy val `scala-cloudformation-custom-resource` = (project in file("."))
         "org.specs2" %% "specs2-mock" % specs2Version % Test,
         "io.circe" %% "circe-literal" % circeVersion % Test,
         "org.typelevel" %% "cats-laws" % catsVersion % Test,
-        "org.typelevel" %% "discipline-specs2" % "1.0.0" % Test,
+        "org.typelevel" %% "discipline-specs2" % "1.2.3" % Test,
         "org.specs2" %% "specs2-scalacheck" % specs2Version % Test,
       ) ++ Seq(
         "io.circe" %% "circe-core",
