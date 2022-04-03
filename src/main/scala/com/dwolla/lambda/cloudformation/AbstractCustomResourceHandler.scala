@@ -13,12 +13,13 @@ import org.apache.logging.log4j._
 
 import scala.concurrent.ExecutionContext
 import scala.io.Source
+import cats.effect.Temporal
 
 abstract class IOCustomResourceHandler(protected val executionContext: ExecutionContext) extends RequestStreamHandler { ioLambda =>
   def this() = this(ExecutionContext.global)
 
   protected implicit def contextShift: ContextShift[IO] = cats.effect.IO.contextShift(executionContext)
-  protected implicit def timer: Timer[IO] = cats.effect.IO.timer(executionContext)
+  protected implicit def timer: Temporal[IO] = cats.effect.IO.timer(executionContext)
 
   def handleRequest(req: CloudFormationCustomResourceRequest): IO[HandlerResponse]
 
